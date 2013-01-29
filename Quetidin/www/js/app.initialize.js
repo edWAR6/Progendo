@@ -151,6 +151,7 @@ function revertAllFlip(){
         $this.removeClass('on');
         $this.addClass('off');
     });
+    $('div.drop_row').droppable( "option", "disabled", true );
 }
 
 function resetPosition(){

@@ -88,19 +88,19 @@ div.droppable{
     width: 39.8em;
 }
 div.pills1{
-    background: url('../images/pills1.png') no-repeat;
+    background: url('../images/pills1.png') repeat;
     height: 68px;
     left: 60em;
-    position: relative;
-    top: -69em;
+    top: -24.5em;
+    position: absolute;
     width: 7em;
 }
 div.pills2{
-    background: url('../images/pills2.png') no-repeat;
+    background: url('../images/pills2.png') repeat;
     height: 6em;
     left: 60em;
-    position: relative;
-    top: -63em;
+    top: -13em;
+    position: absolute;
     width: 8em;
 }
 

@@ -59,8 +59,51 @@ function onDeviceReady() {
 
 function initDragAndDrop(){
 
-    $( "div.draggable" ).draggable({ appendTo: "div.droppable", revert: 'invalid' });
-    $( "div.droppable" ).droppable({ accept: "div.draggable" });
+    $( "div.draggable" ).draggable({
+        appendTo: "div.droppable",
+        revert: 'invalid',
+        stop: function() {
+            if (!$(this).hasClass('reverted')) {
+                if ($(this).hasClass('pills1')) {
+                    $(this).width(450);
+                    $(this).css('left', 140);
+                } else{
+                    $(this).width(405);
+                    $(this).css('left', 160);
+                };    
+            };
+        },
+        start: function() {
+            $(this).removeClass('reverted');
+            if ($(this).hasClass('pills1')) {
+                $(this).width(85);
+            } else{
+                $(this).width(105);
+            };
+        },
+        revert: function (event, ui) {
+            if (event === false) {
+                $(this).addClass('reverted');
+            }
+            var newOriginalPosition = {};
+            if ($(this).hasClass('pills1')) {
+                newOriginalPosition = {
+                    top: '-24.5em',
+                    left: '60em'
+                };
+            } else {
+                newOriginalPosition = {
+                    top: '-13em',
+                    left: '60em'
+                };
+            };
+            $(this).data("draggable").originalPosition = newOriginalPosition;
+            return !event;
+        } 
+    });
+    $( "div.droppable" ).droppable({
+        accept: "div.draggable"
+     });
 }
 
 // onSuccess Geolocation

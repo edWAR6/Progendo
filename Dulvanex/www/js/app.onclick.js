@@ -84,12 +84,14 @@ $(function(){
    });
 
   $('#submit_goto_inicio_from_titulacion1').click(function(){
+    revertDraggable($("div.draggable"));
      SaveLogInfo(TITULACION1_SCREEN_ID,GO_TO_INDEX_SCREEN);
      $('#titulacion1_div').fadeOut();
      $('#index_div').fadeIn();
    });
 
   $('#submit_goto_inicio_from_titulacion2').click(function(){
+    revertDraggable($("div.draggable"));
      SaveLogInfo(TITULACION2_SCREEN_ID,GO_TO_INDEX_SCREEN);
      $('#titulacion2_div').fadeOut();
      $('#index_div').fadeIn();

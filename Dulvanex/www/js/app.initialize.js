@@ -102,8 +102,36 @@ function initDragAndDrop(){
         } 
     });
     $( "div.droppable" ).droppable({
-        accept: "div.draggable"
+        accept: "div.draggable",
+        drop: function(event, ui) {
+            if (!ui.draggable.data("originalPosition")) {
+                ui.draggable.data("originalPosition",
+                    ui.draggable.data("draggable").originalPosition);
+            }
+        }
      });
+}
+
+function revertDraggable($selector) {
+    $selector.each(function() {
+        var $this = $(this),
+            position = $this.data("originalPosition");
+
+        if (position) {
+            $this.animate({
+                left: position.left,
+                top: position.top
+            }, 500, function() {
+                $this.data("originalPosition", null);
+            });
+            $(this).removeClass('reverted');
+            if ($(this).hasClass('pills1')) {
+                $(this).width(85);
+            } else{
+                $(this).width(105);
+            };
+        }
+    });
 }
 
 // onSuccess Geolocation

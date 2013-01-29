@@ -69,18 +69,21 @@ $(function(){
   //=======================================================================================
 
   $('#submit_goto_versatilidad_from_versatilidad_a').click(function(){
+    revertDraggable($("div.draggable"));
     SaveLogInfo(VERSATILIDAD_A_SCREEN_ID,GO_TO_VERSATILIDAD_SCREEN);
     $('#versatilidad_a_div').slideUp();
     $('#versatilidad_div').slideDown();
   });
 
   $('#submit_goto_index_from_versatilidad_a').click(function(){
+    revertDraggable($("div.draggable"));
     SaveLogInfo(VERSATILIDAD_A_SCREEN_ID,GO_TO_INDEX_SCREEN);
     $('#versatilidad_a_div').slideUp();
     $('#index_div').slideDown();
   });
 
   $('#submit_goto_versatilidad_b').click(function(){
+    revertDraggable($("div.draggable"));
     SaveLogInfo(VERSATILIDAD_A_SCREEN_ID,GO_TO_VERSATILIDAD_B_SCREEN);
     $('#versatilidad_a_div').slideUp();
     $('#versatilidad_b_div').slideDown();
@@ -177,12 +180,14 @@ $(function(){
   //=======================================================================================
 
   $('#submit_goto_index_from_titulacion_fin').click(function(){
+    revertDraggable($("div.draggable"));
     SaveLogInfo(TITULACION_FIN_SCREEN_ID,GO_TO_INDEX_SCREEN);
     $('#titulacion_fin_div').slideUp();
     $('#index_div').slideDown();
   });
 
   $('#submit_goto_si_se_puede').click(function(){
+    revertDraggable($("div.draggable"));
     SaveLogInfo(TITULACION_FIN_SCREEN_ID,GO_TO_SI_SE_PUEDE_SCREEN);
     $('#titulacion_fin_div').slideUp();
     $('#si_se_puede_div').slideDown();

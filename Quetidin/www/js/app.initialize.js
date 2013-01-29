@@ -96,7 +96,15 @@ function onDeviceReady() {
             return !event;
         } 
     });
-    $( "div.drop_row").droppable({ disabled: true });
+    $( "div.drop_row").droppable({
+        disabled: true,
+        drop: function(event, ui) {
+            if (!ui.draggable.data("originalPosition")) {
+                ui.draggable.data("originalPosition",
+                    ui.draggable.data("draggable").originalPosition);
+            }
+        }
+    });
     flipAction();
     enableCalendar();
 }
@@ -179,16 +187,13 @@ var cloneCont = 0;
 
 function enableCalendar(){
     $( '#calendar' ).droppable({ 
-        disabled: false 
-        // drop: function(event, ui) {
-        //    //clone and remove positioning from the helper element
-        //    var newDiv = $('div.draggable.cc.e').clone(true)
-        //         .removeClass('ui-draggable-dragging')
-        //         .css({position:'relative', left: $(ui.helper).position().left - $('div#calendar').position().left, top: 0});//$(ui.helper).position().top - $('div#calendar').position().top})
-        //         // newDiv.attr('id', 'cQ25_' + (++cloneCont)).insertAfter( newDiv );;        
-        //    $(this).append(newDiv);
-        //    $('#'+newDiv.attr('id')).first().attr('id', 'c_' + (++cloneCont));
-        // }
+        disabled: false,
+        drop: function(event, ui) {
+        if (!ui.draggable.data("originalPosition")) {
+            ui.draggable.data("originalPosition",
+                ui.draggable.data("draggable").originalPosition);
+        }
+    }
     });
     $( "div.draggable.cc" ).draggable( { 
         connectToSortable: '#calendar',
@@ -197,22 +202,22 @@ function enableCalendar(){
             var newOriginalPosition = {};
             if ($(this).hasClass('e')) {
                 newOriginalPosition = {
-                    top: '33.3em',
+                    top: '46.3em',
                     left: '28.8em'
                 };
             } else if ($(this).hasClass('f')) {
                 newOriginalPosition = {
-                    top: '27.2em',
+                    top: '45.2em',
                     left: '36.9em'
                 };
             } else if ($(this).hasClass('g')) {
                 newOriginalPosition = {
-                    top: '20.2em',
+                    top: '45.2em',
                     left: '43.2em'
                 };
             } else if ($(this).hasClass('h')) {
                 newOriginalPosition = {
-                    top: '14.5em',
+                    top: '44.5em',
                     left: '50.1em'
                 };
             };
@@ -222,9 +227,22 @@ function enableCalendar(){
             return !event;
         } 
     });
+}
 
+function revertDraggable($selector) {
+    $selector.each(function() {
+        var $this = $(this),
+            position = $this.data("originalPosition");
 
-
+        if (position) {
+            $this.animate({
+                left: position.left,
+                top: position.top
+            }, 500, function() {
+                $this.data("originalPosition", null);
+            });
+        }
+    });
 }
 
 function onDeviceMinimized() {

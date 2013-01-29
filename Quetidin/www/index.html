@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+        
+        
+        <!-- iPad/iPhone specific css below, add after your main css >
+         <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+         <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+         -->
+        <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <!-- // <script src="http://debug.phonegap.com/target/target-script-min.js#edWAR6"></script> -->
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" src="js/logger.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.6.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flip.min.js"></script>
+    <!-- // <script type="text/javascript" src="js/jquery.inputfocus-0.9.min.js"></script> -->
+    
+    <script type="text/javascript" src="js/app.config.js"></script>
+    <script type="text/javascript" src="js/app.initialize.js"></script>
+    <script type="text/javascript" src="js/localstorage.js"></script>
+    
+    <script type="text/javascript" src="js/app.onclick.js"></script>
+    <!-- // <script type="text/javascript" src="js/networking.js"></script> -->
+        
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/loader.min.js"></script>
+        
+    <script type="text/javascript" charset="utf-8">
+        console.log('Runing');
+        document.addEventListener("deviceready", onDeviceReady, false);
+        // document.addEventListener("resume", onDeviceResumed, false);
+        // document.addEventListener("touchmove", preventBehavior, false);
+        // document.addEventListener("pause",onDeviceMinimized, false);
+        //document.addEventListener("unload", onDeviceClose, false);
+        //document.addEventListener("pause", onDeviceMinimized, false);
+
+        init();
+    </script>
+        
+</head>
+<body>
+	
+	<div id="container">
+        <form action="#" method="post">
+            
+            <!-- Fastclick script -->
+             
+             <span id="fastclick">
+
+                <div id="index_div">
+                    <input class="submit" type="submit" name="submit_goto_qproducto" id="submit_goto_qproducto" value="" />
+                    <input class="submit" type="submit" name="submit_goto_versatilidad" id="submit_goto_versatilidad" value="" />
+                    <input class="submit" type="submit" name="submit_goto_titulacion" id="submit_goto_titulacion" value="" />
+                    <img class="bottom_right_corner" src="images/bottom_right_corner.png" />
+                </div>
+
+                <div id="qproducto_div">
+                    <input class="submit" type="submit" name="submit_goto_index_from_qproducto" id="submit_goto_index_from_qproducto" value="" />
+                </div>
+
+                <div id="versatilidad_div"> 
+                    <div class="home_next_br">
+                        <input class="submit" type="submit" name="submit_goto_index_from_versatilidad" id="submit_goto_index_from_versatilidad" value="" />
+                        <input class="submit" type="submit" name="submit_goto_versatilidad_a" id="submit_goto_versatilidad_a" value="" />
+                    </div>
+                    <img class="versatilidad_content" src="images/versatilidad_main.png" />
+                    <img class="bottom_right_corner" src="images/bottom_right_corner.png" />
+                </div>
+
+                <div id="versatilidad_a_div">
+                    <div class="prev_home_next_br">
+                        <input class="submit" type="submit" name="submit_goto_versatilidad_from_versatilidad_a" id="submit_goto_versatilidad_from_versatilidad_a" value="" />
+                        <input class="submit" type="submit" name="submit_goto_index_from_versatilidad_a" id="submit_goto_index_from_versatilidad_a" value="" />
+                        <input class="submit" type="submit" name="submit_goto_versatilidad_b" id="submit_goto_versatilidad_b" value="" />
+                    </div>
+                    <div class="drop_row a">
+                        
+                    </div>
+                    <div class="drop_row b">
+
+                    </div>
+                    <div class="drop_row c">
+
+                    </div>
+                    <div class="drag_row">
+                        <div id="Q25" class="draggable t a"></div>
+                        <div id="Q100" class="draggable t b"></div>
+                        <div id="Q200" class="draggable t c"></div>
+                        <div id="Q300" class="draggable t d"></div>
+                    </div>
+                    <div class="flip a off">
+                        
+                    </div>
+                    <div class="flip b off">
+
+                    </div>
+                    <div class="flip c off">
+
+                    </div>
+                </div>
+
+                <div id="versatilidad_b_div">
+                    <input class="submit" type="submit" name="submit_goto_index_from_versatilidad_b" id="submit_goto_index_from_versatilidad_b" value="" />
+                </div>
+
+                <div id="titulacion_div">
+                    <input class="submit" type="submit" name="submit_goto_index_from_titulacion" id="submit_goto_index_from_titulacion" value="" />
+                    <input class="submit" type="submit" name="submit_goto_paciente_1" id="submit_goto_paciente_1" value="" />
+                    <input class="submit" type="submit" name="submit_goto_paciente_2" id="submit_goto_paciente_2" value="" />
+                </div>
+
+                <div id="paciente_1_div">
+                    <div class="prev_home_next_br">
+                        <input class="submit" type="submit" name="submit_goto_titulacion_from_paciente_1" id="submit_goto_titulacion_from_paciente_1" value="" />
+                        <input class="submit" type="submit" name="submit_goto_index_from_paciente_1" id="submit_goto_index_from_paciente_1" value="" />
+                        <input class="submit" type="submit" name="submit_goto_titulacion_fin_from_paciente_1" id="submit_goto_titulacion_fin_from_paciente_1" value="" />
+                    </div>
+                </div>
+
+                <div id="paciente_2_div">
+                    <div class="prev_home_next_br">
+                        <input class="submit" type="submit" name="submit_goto_titulacion_from_paciente_2" id="submit_goto_titulacion_from_paciente_2" value="" />
+                        <input class="submit" type="submit" name="submit_goto_index_from_paciente_2" id="submit_goto_index_from_paciente_2" value="" />
+                        <input class="submit" type="submit" name="submit_goto_titulacion_fin_from_paciente_2" id="submit_goto_titulacion_fin_from_paciente_2" value="" />
+                    </div>
+                </div>
+
+                <div id="titulacion_fin_div">
+                    <input class="submit" type="submit" name="submit_goto_index_from_titulacion_fin" id="submit_goto_index_from_titulacion_fin" value="" />
+                    <input class="submit" type="submit" name="submit_goto_si_se_puede" id="submit_goto_si_se_puede" value="" />
+                    <div id="calendar">
+
+                    </div>
+                    <div id="cQ025_0" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_1" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_2" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_3" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_4" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_5" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_6" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_7" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_8" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_9" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_10" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_11" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_12" class="cQ25 draggable cc e"></div>
+                    <div id="cQ025_13" class="cQ25 draggable cc e"></div>
+
+                    <div id="cQ100_0" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_1" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_2" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_3" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_4" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_5" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_6" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_7" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_8" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_9" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_10" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_11" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_12" class="cQ100 draggable cc f"></div>
+                    <div id="cQ100_13" class="cQ100 draggable cc f"></div>
+
+                    <div id="cQ200_0" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_1" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_2" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_3" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_4" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_5" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_6" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_7" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_8" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_9" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_10" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_11" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_12" class="cQ200 draggable cc g"></div>
+                    <div id="cQ200_13" class="cQ200 draggable cc g"></div>
+
+                    <div id="cQ300_0" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_1" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_2" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_3" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_4" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_5" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_6" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_7" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_8" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_9" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_10" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_11" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_12" class="cQ300 draggable cc h"></div>
+                    <div id="cQ300_13" class="cQ300 draggable cc h"></div>
+
+                </div>
+
+                <div id="si_se_puede_div">
+                    <input class="submit" type="submit" name="submit_goto_index_from_si_se_puede" id="submit_goto_index_from_si_se_puede" value="" />
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+                <!-- #loading_animation_div -->
+                <div id="loading_animation_div">
+                    <h1><span>Synchronizing</span></h1>
+                    
+                    <div class="form">
+                        
+                        <!-- Create a div which will be the canvasloader wrapper -->
+                        <div id="canvasloader-container" class="wrapper"></div>
+                        
+                        
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+            
+                
+            <!--span close for fastclick script   -->
+             
+             </span>
+             
+           
+            
+            
+        </form>
+	</div>
+	
+</body>
+</html>

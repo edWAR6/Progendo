@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+    <!-- iPad/iPhone specific css below, add after your main css >
+     <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+     -->
+    <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.6.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inputfocus-0.9.min.js"></script>
+    
+    <script type="text/javascript" src="js/app.config.js"></script>
+    <script type="text/javascript" src="js/app.initialize.js"></script>
+    <script type="text/javascript" src="js/localstorage.js"></script>
+    <script type="text/javascript" src="js/logger.js"></script>
+    <script type="text/javascript" src="js/app.onclick.js"></script>
+    <script type="text/javascript" src="js/networking.js"></script>
+        
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/loader.min.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+            // document.addEventListener("resume", onDeviceResumed, false);
+            document.addEventListener("touchmove", preventBehavior, false);
+            // document.addEventListener("pause",onDeviceMinimized, false);
+            //document.addEventListener("unload", onDeviceClose, false);
+            //document.addEventListener("pause", onDeviceMinimized, false);
+        </script>        
+</head>
+<body onload="onDeviceReady()">
+	
+	<div id="container">
+        <form action="#" method="post">
+            
+            <!-- Fastclick script -->
+             
+             <span id="fastclick">
+
+                <div id="index_div">  
+                    <div id="indexbuttons_div">
+                        <input class="submit" type="submit" name="submit_goto_dolor_from_index" id="submit_goto_dolor_from_index" value="" />
+                        <input class="submit" type="submit" name="submit_goto_psiquiatra_from_index" id="submit_goto_psiquiatra_from_index" value="" />
+                    </div><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <input class="submit" type="submit" name="submit_button_log" id="submit_goto_log" value="" />                      
+                </div> <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                 <div id="dolor_div">
+                    <input class="submit_back_index" type="submit" name="submit_goto_inicio_from_dolor" id="submit_goto_inicio_from_dolor" value="" />
+                    <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <div id="dolorbuttons_div">
+                        <input class="submit" type="submit" name="submit_goto_dolorCronico1_from_dolor" id="submit_goto_dolorCronico1_from_dolor" value="" />
+                        <input class="submit" type="submit" name="submit_goto_esquemaTitulacion_from_dolor" id="submit_goto_esquemaTitulacion_from_dolor" value="" />
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                 </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->     
+                 
+                 <div id="dolorCronico1_div">
+                    <div id="atrasInicioDelante_buttons">
+                        <input class="submit" type="submit" name="submit_goto_dolor_from_dolorCronico1" id="submit_goto_dolor_from_dolorCronico1" value="" />
+                        <input class="submit" type="submit" name="submit_goto_inicio_from_dolorCronico1" id="submit_goto_inicio_from_dolorCronico1" value="" />
+                        <input class="submit" type="submit" name="submit_goto_dolorCronico2_from_dolorCronico1" id="submit_goto_dolorCronico2_from_dolorCronico1" value="" />
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->     
+                 </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->   
+                                           
+                <div id="dolorCronico2_div">                    
+                    <div id="atrasInicioDelante_buttons">
+                        <input class="submit" type="submit" name="submit_goto_dolorCronico1_from_dolorCronico2" id="submit_goto_dolorCronico1_from_dolorCronico2" value="" />
+                        <input class="submit" type="submit" name="submit_goto_inicio_from_dolorCronico2" id="submit_goto_inicio_from_dolorCronico2" value="" />
+                        <input class="submit" type="submit" name="submit_goto_dolorCronico3_from_dolorCronico2" id="submit_goto_dolorCronico3_from_dolorCronico2" value="" />
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->  
+                        <input class="submit" type="submit" name="submit_mostrar_imagen_dolorCronico1" id="submit_mostrar_imagen_dolorCronico1" value="" />
+                        <input class="submit" type="submit" name="submit_mostrar_imagen_dolorCronico2" id="submit_mostrar_imagen_dolorCronico2" value="" />  
+                    <img id="imagen_dolorCronico1" src="images/content_imagen_dolorCronico1.png" />
+                    <img id="imagen_dolorCronico2" src="images/content_imagen_dolorCronico2.png" />
+                </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->     
+
+                <div id="dolorCronico3_div">
+                    <div id="atrasInicio_buttons">
+                        <input class="submit" type="submit" name="submit_goto_dolorCronico2_from_dolorCronico3" id="submit_goto_dolorCronico2_from_dolorCronico3" value="" />
+                        <input class="submit" type="submit" name="submit_goto_inicio_from_dolorCronico3" id="submit_goto_inicio_from_dolorCronico3" value="" />
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->   
+                </div>  <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                <div id="psiquiatria_div">
+                    <input class="submit_back_index" type="submit" name="submit_goto_inicio_from_psiquiatria" id="submit_goto_inicio_from_psiquiatria" value="" />
+                    <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <input class="submit" type="submit" name="submit_goto_psiquiatriaVideos_from_psiquiatria" id="submit_goto_psiquiatriaVideos_from_psiquiatria" value="" />
+                 </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix --> 
+                   
+                 <div id="psiquiatriaVideos_div">
+                    <input class="submit_back_index" type="submit" name="submit_goto_inicio_from_psiquiatriaVideos" id="submit_goto_inicio_from_psiquiatriaVideos" value="" />
+                    <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <div id="psiquiatriaVideosbuttons_div">
+                        <input class="submit" type="submit" name="submit_goto_video1_from_psiquiatriaVideos" id="submit_goto_video1_from_psiquiatriaVideos" value="" />
+                        <input class="submit" type="submit" name="submit_goto_video2_from_psiquiatriaVideos" id="submit_goto_video2_from_psiquiatriaVideos" value="" />
+                 </div></div><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                 <div id="video1_div">
+                    <div class="atrasInicioVideos_buttons">
+                        <input class="submit" type="submit" name="submit_goto_psiquiatriaVideos_from_video1" id="submit_goto_psiquiatriaVideos_from_video1" value="" />
+                        <input class="submit" type="submit" name="submit_goto_inicio_from_video1" id="submit_goto_inicio_from_video1" value="" />
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix --> 
+
+                     <video id="video1">
+                         <source src="video/DULVANEX1.mp4" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                             </video>
+                     <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                     
+                     <input class="submit" type="submit" name="submit_play_video1" id="submit_play_video1" value="" /><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                 </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix --> 
+
+                 <div id="video2_div">
+                    <div class="atrasInicioVideos_buttons">
+                        <input class="submit" type="submit" name="submit_goto_psiquiatriaVideos_from_video2" id="submit_goto_psiquiatriaVideos_from_video2" value="" />
+                        <input class="submit" type="submit" name="submit_goto_inicio_from_video2" id="submit_goto_inicio_from_video2" value="" />
+                    </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix --> 
+
+                     <video id="video2">
+                         <source src="video/DULVANEX2.mp4" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                             </video>
+                     <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                     
+                     <input class="submit" type="submit" name="submit_play_video2" id="submit_play_video2" value="" /><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                 </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix --> 
+
+                <div id="esquemaTitulacion_div">
+                    <input class="submit_back_index" type="submit" name="submit_goto_inicio_from_esquemaTitulacion" id="submit_goto_inicio_from_esquemaTitulacion" value="" /><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <div id="titulacionButtons_div">
+                        <input class="submit" type="submit" name="submit_goto_titulacion1_from_esquemaTitulacion" id="submit_goto_titulacion1_from_esquemaTitulacion" value="" />
+                        <input class="submit" type="submit" name="submit_goto_titulacion2_from_esquemaTitulacion" id="submit_goto_titulacion2_from_esquemaTitulacion" value="" />
+                    </div><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <input class="submit" type="submit" name="submit_button_log" id="submit_goto_log" value="" />                      
+                </div> <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+    
+                <div id="titulacion1_div">  
+                    <input class="submit_back_index" type="submit" name="submit_goto_inicio_from_titulacion1" id="submit_goto_inicio_from_titulacion1" value="" /><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                    <div id="titulacion1Buttons_div">
+                        <img id="imagen_titulacion" src="images/content_imagen_titulacion.png" />
+                        <img id="imagen_mantenimiento" src="images/content_imagen_mantenimiento.png" />
+                        <img class="calendar_options" src="images/calendar_options.png" />
+                        <div class="droppable"></div>
+                        <div class="pills1 draggable"></div>
+                        <div class="pills2 draggable"></div>
+                    </div><!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                </div> <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                <div id="titulacion2_div">
+                    <input class="submit_back_index" type="submit" name="submit_goto_inicio_from_titulacion2" id="submit_goto_inicio_from_titulacion2" value="" /><!-- clearfix --><div class="clear"></div><!-- /clearfix -->  
+                    <div id="titulacion2Buttons_div">
+                        <img id="imagen_primerMes" src="images/content_imagen_primerMes.png" />
+                        <img id="imagen_seguimiento" src="images/content_imagen_seguimiento.png" />
+                        <img class="calendar_options" src="images/calendar_options.png" />
+                        <div class="droppable"></div>
+                        <div class="pills1 draggable"></div>
+                        <div class="pills2 draggable"></div>
+                    </div><!-- clearfix --><div class="clear"></div><!-- /clearfix -->              
+                </div> <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+
+                <!-- #LOG DIV --> 
+                <div id="log_div">
+                 
+                     <input class="submit_back_index" type="submit" name="submit_synchronize2" id="submit_synchronize2" value="" />
+                     <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                     
+                     <input class="submit" type="submit" name="submit_synchronize" id="submit_synchronize" value="" />
+                    <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                 
+                </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+
+                 <!-- #loading_animation_div -->
+                 <div id="loading_animation_div">
+                     <h1><span>Synchronizing</span></h1>
+                     
+                     <div class="form">
+                         
+                         <!-- Create a div which will be the canvasloader wrapper -->
+                         <div id="canvasloader-container" class="wrapper"></div>
+                         
+                         
+                     </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                 </div>      <!-- clearfix --><div class="clear"></div><!-- /clearfix -->
+                 
+            <!--span close for fastclick script   -->
+             
+             </span>
+        </form>
+	</div>
+	
+</body>
+</html>
+                    

@@ -1,0 +1,413 @@
+
+/* CSS Reset (Eric Meyer) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+
+@font-face {
+   font-family: 'Cantarell';
+   src: url(../fonts/Cantarell-Regular.eot);
+   src: local('Cantarell'), url('../fonts/Cantarell-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #222;
+    font-family: Cantarell, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner { border : none; } 
+input[type="submit"]:focus, input[type="button"]:focus { outline : none; }
+
+.clear { clear: both; }
+
+#container {
+    width: 1024px; height: 768px;
+    overflow:hidden;
+}
+    #container #index_div, #qproducto_div, #versatilidad_div, #versatilidad_a_div, #versatilidad_b_div, #titulacion_div, #paciente_1_div, #paciente_2_div, #titulacion_fin_div, #si_se_puede_div
+    { width: 1024px; height: 768px; display: none; position: relative; }
+    
+    /*PAGES*/
+    #container #index_div { display: block; background: url('../images/index_bg.png') no-repeat; }
+    #container #qproducto_div { background: url('../images/qproducto_bg.jpg') no-repeat; }
+    #container #versatilidad_div { background: url('../images/index_bg.png') no-repeat; }
+    #container #versatilidad_a_div { background: url('../images/versatilidad_a_bg.png') no-repeat; }
+    #container #versatilidad_b_div { background: url('../images/versatilidad_b_bg.png') no-repeat; }
+    #container #titulacion_div { background: url('../images/titulacion_bg.jpg') no-repeat; }
+    #container #paciente_1_div { background: url('../images/paciente_1_bg.png') no-repeat; }
+    #container #paciente_2_div { background: url('../images/paciente_2_bg.png') no-repeat; }
+    #container #titulacion_fin_div { background: url('../images/titulacion_fin_bg.png') no-repeat; }
+    #container #si_se_puede_div { background: url('../images/si_se_puede_bg.jpg') no-repeat; }
+
+
+
+
+
+    
+    
+        
+    #container h1, #container h2 {
+        font-size: Cantarell, Verdana, sans-serif;
+        text-align: center;
+        font-size: 24px;
+        text-shadow: 1px 1px 2px #222;
+    }
+    
+    #container h1 span { color: #a90329; }
+        
+    #container h2 {
+        color: #888;
+        font-size: 20px;
+        text-align: left;
+        text-shadow: none;
+    }
+    
+    #container table {
+        margin: 20px 40px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+        #container table td {
+            padding: 5px 10px;
+        }
+            #container table td:nth-child(2) {
+                color: #a90329;
+            }   
+        
+    #container input, #container select {
+        background: url('../images/input.png') no-repeat;
+        color: #888;
+        border: 1px solid #ccc;
+        font-family: Cantarell, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        width: 300px;
+        height: 35px;*
+        padding: 0 25px;
+        margin: 20px 0;
+        float: left;
+
+    }
+    
+    #container input.submit {
+        border: none;
+        cursor: pointer;
+        width: 768px;
+        height: 74px;
+        position: relative;
+        bottom: 6px;
+        left: 0em;
+    }
+
+    #container div.home_next_br{
+        background: url("../images/home_next_br.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 95px;
+        left: 70em;
+        position: relative;
+        top: 0;
+        width: 12em;
+    }
+
+    #container div.prev_home_next_br{
+        background: url("../images/prev_home_next_br.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 95px;
+        left: 66em;
+        position: relative;
+        top: 1em;
+        width: 201px;
+    }
+
+    /*INPUTS*/
+    #container input.submit#submit_goto_qproducto {
+        background: url("../images/quetidin.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 205px;
+        left: 5em;
+        position: relative;
+        top: 23em;
+        width: 222px;
+    }
+
+    #container input.submit#submit_goto_index_from_qproducto,
+    #container input.submit#submit_goto_index_from_versatilidad_b,
+    #container input.submit#submit_goto_index_from_titulacion,
+    #container input.submit#submit_goto_index_from_titulacion_fin,
+    #container input.submit#submit_goto_index_from_si_se_puede {
+        background: url("../images/index.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 6em;
+        left: 61.15em;
+        position: relative;
+        top: -3px;
+        width: 6em;
+    }
+
+    #container input.submit#submit_goto_versatilidad {
+        background: url("../images/index_link1.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 210px;
+        left: 6em;
+        position: relative;
+        top: 6em;
+        width: 733px;
+    }
+
+    #container input.submit#submit_goto_index_from_versatilidad {
+        background: url("../images/index_in.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 58px;
+        left: 1.1em;
+        position: relative;
+        top: -5px;
+        width: 58px;
+    }
+
+    #container input.submit#submit_goto_versatilidad_a {
+        background: url("../images/next_in.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 39px;
+        left: 2.3em;
+        top: 0.3em;
+        width: 39px;
+    }
+
+    #container input.submit#submit_goto_versatilidad_from_versatilidad_a,
+    #container input.submit#submit_goto_titulacion_from_paciente_1,
+    #container input.submit#submit_goto_titulacion_from_paciente_2 {
+        background: url("../images/previous_in.png") no-repeat scroll 0 0 
+        transparent;
+        background-size: 100%;
+        height: 39px;
+        left: 0.97em;
+        top: 0.46em;
+        width: 39px;
+    }
+
+    #container input.submit#submit_goto_index_from_versatilidad_a,
+    #container input.submit#submit_goto_index_from_paciente_1,
+    #container input.submit#submit_goto_index_from_paciente_2 {
+        background: url("../images/index_in.png") no-repeat scroll 0 0 transparent;
+        height: 95px;
+        left: 2.105em;
+        position: relative;
+        top: -3px;
+        width: 95px;
+    }
+
+    #container input.submit#submit_goto_versatilidad_b,
+    #container input.submit#submit_goto_titulacion_fin_from_paciente_1,
+    #container input.submit#submit_goto_titulacion_fin_from_paciente_2 {
+        background: url("../images/next_in.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 39px;
+        left: 0.8em;
+        top: 0.3em;
+        width: 39px;
+    }
+
+    #container input.submit#submit_goto_titulacion {
+        background: url("../images/index_link2.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 210px;
+        left: 21em;
+        position: relative;
+        top: 4em;
+        width: 733px;
+    } 
+
+    #container input.submit#submit_goto_paciente_1{
+        background: url("../images/titulacion_p_1.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 18em;
+        left: 2em;
+        position: relative;
+        top: 4em;
+        width: 16em;
+    }
+
+    #container input.submit#submit_goto_paciente_2{
+        background: url("../images/titulacion_p_2.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 19em;
+        left: -14.3em;
+        position: relative;
+        top: 22em;
+        width: 16em;
+    }
+        
+    /*IMAGES*/
+    #container img.bottom_right_corner{
+        bottom: 1em;
+        position: absolute;
+        right: 1em;
+    }
+
+    #container img.versatilidad_content{
+        left: -2em;
+        position: relative;
+        top: 10em;
+    }
+
+    #container input.submit#submit_goto_si_se_puede{
+        background: url("../images/listo.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        height: 8.5em;
+        left: -4.3em;
+        position: relative;
+        top: 40em;
+        width: 17em;
+    }
+
+    /*DRAG AND DROP*/
+    #container div.drop_row{
+        height: 8em;
+        left: 29em;
+        position: relative;
+        width: 50em;
+    }
+    #container div.drop_row.a{
+        top: -3em;
+    }
+    #container div.drop_row.b{
+        top: 4.5em;
+    }
+    #container div.drop_row.c{
+        top: 11.7em;
+    }
+
+    #container div.drag_row{
+        height: 9em;
+        position: relative;
+        top: 19.13em;
+        width: 100%;
+    }
+
+    #container div#Q25{
+        background: url("../images/Q25mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 5.2em;
+        left: 7.3em;
+        position: relative;
+        top: 3.9em;
+        width: 9em;
+    }
+    #container div#Q100{
+        background: url("../images/Q100mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 6.6em;
+        left: 19.2em;
+        position: relative;
+        top: -2.6em;
+        width: 7.5em;
+    }
+    #container div#Q200{
+        background: url("../images/Q200mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 7.1em;
+        left: 28.2em;
+        position: relative;
+        top: -9.7em;
+        width: 9.3em;
+    }
+    #container div#Q300{
+        background: url("../images/Q300mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 8em;
+        left: 38.6em;
+        position: relative;
+        top: -17.5em;
+        width: 9.3em;
+    }
+
+    #container div.flip{
+        height: 11.7em;
+        left: 7.6em;
+        position: relative;
+        width: 11.8em;
+    }
+    #container div.flip.a{
+        background: url("../images/h1_a.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        top: -40.5em;
+    }
+    #container div.flip.b{
+        background: url("../images/5ht2a_a.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        top: -36em;
+    }
+    #container div.flip.c{
+        background: url("../images/d2_a.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        top: -32.5em;
+    }
+
+    /*DRAP AND DROP CALENDAR*/
+
+    #container div#calendar{
+        height: 13.3em;
+        left: 22.8em;
+        position: relative;
+        top: 25.5em;
+        width: 45.5em;
+    }
+
+    #container div.cQ25{
+        background: url("../images/Q25mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 5.2em;
+        left: 28.8em;
+        position: absolute;
+        top: 46.3em;
+        width: 6.4em;
+    }
+    #container div.cQ100{
+        background: url("../images/Q100mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 6.6em;
+        left: 36.9em;
+        position: absolute;
+        top: 45.2em;
+        width: 5.2em;
+    }
+    #container div.cQ200{
+        background: url("../images/Q200mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 5.1em;
+        left: 43.2em;
+        position: absolute;
+        top: 45.2em;
+        width: 6.3em;
+    }
+    #container div.cQ300{
+        background: url("../images/Q300mg.png") no-repeat scroll 100% transparent;
+        background-size: 100%;
+        height: 6em;
+        left: 50.1em;
+        position: absolute;
+        top: 44.5em;
+        width: 6.5em;
+    }
+
+    #container select { padding: 5px 0 5px 25px; }
+    #container option { padding: 0 15px; }
+
+    #container label {
+        color: #666;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 14px;
+        float: right;
+        margin: 23px -25px;
+        width: 270px;
+    }
+    
+    #canvasloader-container{
+            position: relative;
+            left: 22em;
+            top: 14em;
+    }
+
+

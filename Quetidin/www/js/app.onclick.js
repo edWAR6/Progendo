@@ -70,6 +70,7 @@ $(function(){
 
   $('#submit_goto_versatilidad_from_versatilidad_a').click(function(){
     revertDraggable($("div.draggable"));
+    revertAllFlip();
     SaveLogInfo(VERSATILIDAD_A_SCREEN_ID,GO_TO_VERSATILIDAD_SCREEN);
     $('#versatilidad_a_div').slideUp();
     $('#versatilidad_div').slideDown();
@@ -77,6 +78,7 @@ $(function(){
 
   $('#submit_goto_index_from_versatilidad_a').click(function(){
     revertDraggable($("div.draggable"));
+    revertAllFlip();
     SaveLogInfo(VERSATILIDAD_A_SCREEN_ID,GO_TO_INDEX_SCREEN);
     $('#versatilidad_a_div').slideUp();
     $('#index_div').slideDown();
@@ -84,6 +86,7 @@ $(function(){
 
   $('#submit_goto_versatilidad_b').click(function(){
     revertDraggable($("div.draggable"));
+    revertAllFlip();
     SaveLogInfo(VERSATILIDAD_A_SCREEN_ID,GO_TO_VERSATILIDAD_B_SCREEN);
     $('#versatilidad_a_div').slideUp();
     $('#versatilidad_b_div').slideDown();

@@ -118,6 +118,7 @@ input[type="submit"]:focus, input[type="button"]:focus { outline : none; }
         position: relative;
         top: 1em;
         width: 201px;
+        z-index: 50;
     }
 
     /*INPUTS*/
@@ -169,7 +170,7 @@ input[type="submit"]:focus, input[type="button"]:focus { outline : none; }
         background: url("../images/next_in.png") no-repeat scroll 0 0 transparent;
         background-size: 100%;
         height: 39px;
-        left: 2.3em;
+        left: 2.1em;
         top: 0.3em;
         width: 39px;
     }
@@ -194,7 +195,7 @@ input[type="submit"]:focus, input[type="button"]:focus { outline : none; }
         left: 2.105em;
         position: relative;
         top: -3px;
-        width: 95px;
+        width: 65px;
     }
 
     #container input.submit#submit_goto_versatilidad_b,
@@ -203,7 +204,7 @@ input[type="submit"]:focus, input[type="button"]:focus { outline : none; }
         background: url("../images/next_in.png") no-repeat scroll 0 0 transparent;
         background-size: 100%;
         height: 39px;
-        left: 0.8em;
+        left: 2.8em;
         top: 0.3em;
         width: 39px;
     }
